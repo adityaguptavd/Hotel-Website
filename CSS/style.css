@@ -1,0 +1,323 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    margin: 0px;
+    row-gap: 100px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.title h1{
+    text-decoration: none;
+}
+
+:root{
+    --theme: #f4a146;
+}
+
+h1{
+    font-size: 50px;
+    text-decoration: underline var(--theme) 3px;
+    text-underline-offset: 10px;
+}
+
+/* first-page */
+.page{
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+    width: 100%;
+}
+
+#title-page p{
+    font-size: 17px;
+}
+
+#title-page{
+    background-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.8) 60%), linear-gradient(to bottom, transparent 85%, black 100%), url(../Images/hotel.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+    animation: bg_img_animate 3s 0.3s;
+}
+
+.title{
+    align-self: flex-end;
+    text-align: right;
+    min-width: 580px;
+    max-width: 600px;
+    margin-right: 50px;
+    margin-top: 100px;
+}
+
+.btn {
+    border: none;
+    border-radius: 8px;
+    height: 32px;
+    width: 127px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4a046c3;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+.btn:hover{
+    background-color: var(--theme);
+    cursor: pointer;
+}
+
+ul{
+    position: fixed;
+    top: 2px;
+    left: 38%;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+span{
+    color: var(--theme);
+}
+
+a:hover{
+    color: var(--theme);
+}
+
+input{
+    border-radius: 10px;
+    position: fixed;
+    top: 10px;
+    right: 5px;
+    height: 28px;
+    background-color: #f4a0461f;
+    border: 1px solid var(--theme);
+    color: var(--theme);
+    font-style: italic;
+
+}
+
+.navbar > img{
+    position: fixed;
+    top: 5px;
+    left: 10px;
+}
+
+.logo{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+
+/* Service Page */
+#service-page{
+    align-items: center;
+    row-gap: 40px;
+    border-top: 4px solid var(--theme);
+    border-image: linear-gradient(to right,black,rgba(65, 105, 225, 0.05) 25%, var(--theme) 50%, rgba(65, 105, 225, 0.05), black 100%) 10;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.card{
+    width: 320px;
+}
+
+.container img{
+    width: 100%;
+    height: auto;
+    max-height: 272px;
+    border-radius: 10px;
+}
+
+.container p{
+    font-size: 25px;
+}
+
+/* About & Contact Page */
+#about-page{
+    border-top: 4px solid var(--theme);
+    border-image: linear-gradient(to right,black,rgba(65, 105, 225, 0.05) 25%, var(--theme) 50%, rgba(65, 105, 225, 0.05), black 100%) 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about{
+    margin-left: 6%;
+    width: 30%;
+}
+
+.contact{
+    margin-right: 6%;
+}
+
+.contact img{
+    display: inline;
+}
+
+.contact p{
+    display: inline;
+    position: relative;
+    top: -14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animations, Logo */
+/* For right arrow */
+.line{
+    border: 1px solid black;
+    display: inline-block;
+    width: 10px;
+    background-color: black;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    padding-bottom: 1px;
+}
+
+.arrow{
+    position: relative;
+    top: -1px;
+    left: -10px;
+    border: solid black;
+    display: inline-block;
+    background-color: rgba(65, 105, 225, 0);
+    border-width: 0px 3px 3px 0px;
+    padding: 3px;
+}
+
+.right{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+/* For vertical line */
+.vertical-line{
+    border: 1px solid var(--theme);
+    display: inline-block;
+    width: 2px;
+    background-color: var(--theme);
+    height: 20px;
+}
+
+/* Background Image Animation */
+
+@keyframes bg_img_animate {
+    from{
+        background-size: 125% 125%;
+    }
+    to{
+        background-size: 100% 96.6vh;
+    }
+}
+
+/* Media Query 1 */
+@media screen and (max-width: 860px){
+    h1{
+        font-size: 35px;
+    }
+    .title{
+        align-self: center;
+        text-align: center;
+        min-width: 200px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 150px;
+    }
+    #title-page{
+        animation: none;
+    }
+    ul{
+        position: fixed;
+        top: 2px;
+        left: 20%;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        row-gap: 50px;
+        width: 100%;
+    }
+
+    .card{
+        width: 300px;
+    }
+    
+    .container img{
+        width: 90%;
+        height: auto;
+        max-height: 272px;
+        border-radius: 10px;
+    }
+}
+
+/* Media Query 2 */
+@media screen and (max-width: 650px){
+    ul{
+        position: fixed;
+        top: 2px;
+        left: 20px;
+    }
+    li{
+        margin-left: 3px;
+    }
+    input{
+        position: relative;
+        top: 250px;
+        left: 30%;
+        background-color: rgba(0, 0, 0, 0.421);
+        border-color: white;
+    }
+    #about-page{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .contact img{
+        display: inline;
+    }
+    
+    .contact p{
+        display: inline;
+        position: relative;
+        top: -14px;
+        font-family: 'Poppins', sans-serif;
+    }
+}
